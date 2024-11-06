@@ -1,0 +1,100 @@
+//..................................second maximum..............................
+#include<iostream>
+using namespace std;
+int main(){
+    int *a,n,max=-1,smax=-1;
+    cout<<"enter the size of element in the array";
+    cin>>n;
+    a=(int*)malloc(n*sizeof(int));
+    cout<<"enter the"<<n<<"element in the array";
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        if(max<a[i]){
+            max=a[i];
+        }
+    }
+     for(int i=0;i<n;i++){
+        if(smax<a[i]&&max!=a[i]){
+            smax=a[i];
+        }
+    }
+    cout<<smax;
+}
+
+//..................................top 2 maximum..............................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int *a,n,max=-1,smax=-1;
+    cout<<"enter the size of element in the array";
+    cin>>n;
+    a=(int*)malloc(n*sizeof(int));
+    cout<<"enter the"<<n<<"element in the array";
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        if(max<a[i]){
+            max=a[i];
+        }
+    }
+     for(int i=0;i<n;i++){
+        if(smax<a[i]&&max!=a[i]){
+            smax=a[i];
+        }
+    }
+    cout<<"first:-"<<max<<"second:-"<<smax;
+}
+
+//..................................top 3 maximum..............................
+
+#include<iostream>
+using namespace std;
+int main(){
+    int *a,n,max=-1,smax=-1,tmax=-1;
+    cout<<"enter the size of element in the array";
+    cin>>n;
+    a=(int*)malloc(n*sizeof(int));
+    cout<<"enter the"<<n<<"element in the array";
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        if(max<a[i]){
+            max=a[i];
+        }
+    }
+     for(int i=0;i<n;i++){
+        if(smax<a[i]&&max!=a[i]){
+            smax=a[i];
+        }
+    }
+     for(int i=0;i<n;i++){
+        if(tmax<a[i]&&max!=a[i]&&smax!=a[i]){
+            tmax=a[i];
+        }
+    }
+    cout<<"first:-"<<max<<"second:-"<<smax<<"third:-"<<tmax;   
+}
+//.................insert an element in starting of array...........
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a[100]={1,5,2,6,1,5,7,8},item;
+    cout<<"enter the item :-";
+    cin>>item;
+    for (int  i = 7; i>=0 ; i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[0]=item;
+     for (int  i =0;i<=8 ; i++)
+    {
+        cout<<a[i];
+    }
+
+}
